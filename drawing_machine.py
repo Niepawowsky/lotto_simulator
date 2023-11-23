@@ -27,7 +27,7 @@ class DrawingMachine:
         chosen_numbers = set()
         while counter != 0:
             drawed = random.choice(self.number_range)
-            chosen_numbers.update(drawed)
+            chosen_numbers.add(drawed)
             counter -= 1
 
         return list(chosen_numbers)
