@@ -2,13 +2,6 @@ from drawing_machine import DrawingMachine
 from lottery_ticket import LotteryTicket
 from totaliser_check import TotaliserCheck
 
-# def test_what_number_lottery_ticket():
-    #given
-
-    #when
-
-    #then
-
 
 if __name__ == '__main__':
     lottery_ticket = LotteryTicket()
