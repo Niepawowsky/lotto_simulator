@@ -14,19 +14,20 @@ class DrawingMachine:
         self.number_range = range(1, 50)
 
     def machine_draw(self):
-        """
-    The machine_draw function is a function that
-    randomly chooses 6 numbers from the number_range list.
-    It then appends those chosen numbers to the chosen_numbers list and returns it.
 
-    :param self: Access the attributes and methods of the class
-    :return: A list of 6 random numbers
-    """
+        """
+        The machine_draw function is a function that draws 6 random numbers from the number_range list.
+        It does this by using the random.choice() method, which chooses a random element from a non-empty sequence.
+
+        :param self: Make the function a method of the class
+        :return: A list of 6 random numbers
+        :doc-author: Trelent
+        """
         counter = 6
-        chosen_numbers = []
+        chosen_numbers = set()
         while counter != 0:
             drawed = random.choice(self.number_range)
-            chosen_numbers.append(drawed)
+            chosen_numbers.update(drawed)
             counter -= 1
 
-        return chosen_numbers
+        return list(chosen_numbers)
